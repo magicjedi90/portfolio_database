@@ -1,0 +1,31 @@
+databaseType = "PostgreSql"
+id = "f3605092-df6f-4ed6-9e15-66342e5bc015"
+name = "portfolio-database"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.behavior]
+detectRenames = "identical-only"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"
+
+[environments.GCP]
+url = "jdbc:postgresql://34.168.85.183:5432/postgres?cloudSqlInstance=wide-bivouac-453212-v8:us-west1:portfolio-id"
+schemas = [ "public" ]
+displayName = "portfolio-bucket"

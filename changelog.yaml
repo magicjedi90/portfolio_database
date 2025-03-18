@@ -1,5 +1,0 @@
-databaseChangeLog:
-  - includeAll:
-      path: tables/
-  - includeAll:
-      path: relationships/

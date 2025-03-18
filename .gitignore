@@ -2,3 +2,9 @@
 /.idea
 
 /liquibase.properties
+
+# Flyway ignores
+*.user.toml
+*.artifact
+report.html
+report.json
